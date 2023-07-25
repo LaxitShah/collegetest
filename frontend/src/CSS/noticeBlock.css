@@ -1,0 +1,86 @@
+/* <link href="https://fonts.googleapis.com/css?family=Schoolbell&v1" rel="stylesheet"> */
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+.folded-corner {
+    position: relative;
+  }
+  
+  .folded-corner:after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 0px;
+    height: 0px;
+    border-top: 30px solid #eee;
+    border-right: 30px solid transparent;
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.3);
+  }
+  /* header colors */
+
+  /* headerColors.css */
+.header-color-0 {
+    background-color: #b2dbc3!important;
+  }
+.header-color-1{
+    background-color: #8cc8e6!important;
+  }
+.header-color-2{
+    background-color: #dbe0a6 !important; 
+  }
+  
+  /* .header-color-1 {
+    background-color:lightpink !important;
+  }
+  
+  .header-color-2 {
+    background-color: lightyellow !important;
+  }
+  
+  .header-color-3 {
+    background-color: lightcyan !important;
+  }
+  
+  
+  .header-color-4{
+    background-color: lightsteelblue !important;
+  } */
+  /* body color */
+  .bg-color-0 {
+    background-color: #d0f4de !important;
+  }
+  .bg-color-1{
+    background-color: #a9def9 !important;
+  }
+  .bg-color-2{
+    background-color: #FFF6BD !important;
+  }
+  
+
+  /* colors */
+  /* .bg-red {
+    background-color:gray;
+  }
+  
+  .bg-orange {
+    background-color: #F8931F;
+  }
+  
+  .bg-yellow {
+    background-color: #FFFF01;
+  }
+  
+  .bg-green {
+    background-color: #009245;
+  }
+  
+  .bg-blue {
+    background-color: #0193D9;
+  }
+  
+  .bg-indigo {
+    background-color: gray;
+  }
+  
+  .bg-gray {
+    background-color: gray;
+  } */

@@ -1,0 +1,36 @@
+.about-us {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .section-heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .section-subheading h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .about-us-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .section-content {
+    margin-top: 40px;
+  }
+  

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+ /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap'); */
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Rosario:ital,wght@0,300;1,500&display=swap');
+ /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); */
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+
+
+
+/* AboutUsPage.css */
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+  
+  .banner-container {
+    position: relative;
+    width: 100%;
+    max-height: 125vh;
+    overflow: hidden;
+  }
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom-right-radius: 70px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark shade overlay */
+  }
+  .banner-image {
+    width: 100%;
+    max-height: 78vh;
+    overflow: hidden;
+    border-bottom-right-radius: 70px;
+    opacity: 0.8;
+    /* object-fit: cover;
+    border-bottom-right-radius: 50px; */
+  }
+  .banner-title {
+    position: absolute;
+    bottom: 290px;
+    /* color:white; */
+    font-weight: 600;
+    /* font-size: 50px !important; */
+    left: 110px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 10px 20px;
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    border-radius: 5px;
+  }
+  .banner-title h1 {
+    font-size: 54px;
+    margin: 0;
+    color:whitesmoke;
+  }
+  
+  .description-container {
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    margin-top: 7px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin-top: 30px;
+  }
+  
+  .left-content {
+    flex: 1;
+    /* margin-top: 30px; */
+    padding-right: 160px;
+    /* margin-right: 60px; */
+
+  }
+  
+  .right-content {
+    flex: 1;
+    display: flex;
+    margin-left: 70px;
+    /* margin-right: 20px; */
+    border-top-right-radius: 50px;
+    /* justify-content: center; */
+    justify-content: flex-end;
+    
+    /* align-items: flex-start; */
+  }
+  .right-image {
+    max-width: 125%;
+    max-height: 400px;
+    border-radius: 8px;
+    /* margin-left: 30px !important; */
+    /* border-bottom-right-radius: 50px;  */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .about-us-desc
+  {
+    margin-top: 30px;
+  }
+  .welcome-title
+  {
+    /* margin-top: 7px; */
+    font-size: 32px;
+    font-weight: bold;
+  }
+  blockquote.motivating-quote {
+    /* font-size: 20px; */
+    font-style: italic;
+    /* color: #555; */
+    margin-top: 30px;
+    font-family: 'Inter', sans-serif;
+  
+    font-size: 24px;
+    font-style: italic;
+    color: #fff;
+    /* margin-top: 40px; */
+    padding: 5px;
+    background-color: #555;
+    /* border-left: 4px solid #2196F3; */
+    border-radius: 4px;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.4);
+    /* font-style: italic; */
+    /* font-weight: 800; */
+    /* color: "w; */
+    /* font-weight: 500; */
+    /* font-size: 35px; */
+  }
+  
+  .founder-cards {
+    display: flex;
+    margin-top: 70px;
+  }
+  
+  .founder-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    margin-right: 70px;
+  }
+  
+  .founder-image {
+    width: 160px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 10px; 
+  }
+  
+  .founder-details {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .founder-details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    /* margin-right: 120px; */
+    margin-bottom: 10px; 
+  }
+  
+  .founder-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-right: 10px;
+    margin-bottom: 10px; 
+  }
+  .founder-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .founder-links a {
+    color: #555;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .founder-links a:hover {
+    color: #2196F3; /* Change color on hover */
+  }

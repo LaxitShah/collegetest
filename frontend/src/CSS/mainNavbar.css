@@ -1,0 +1,68 @@
+.main-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container Link:hover {
+  display: inline-block;
+  background-color: #4c9e9e;
+  transition: 0.3s ease;
+}
+
+.nav-link-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-custom {
+  color: black;
+  transition: color 0.3s;
+  margin-left: 1rem;
+}
+
+.nav-link-custom :hover {
+  color: #4c9e9e !important;
+  /* background-color:; */
+  background-color: ghostwhite;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-link-custom active {
+  background-color: salmon;
+  color: black;
+}
+
+@media screen and (min-width: 1024px) {
+  .search-margin-left {
+    margin-left: 50px;
+  }
+  .margin-nav-list
+  {
+    margin-left: 45px;
+  }
+  .main-navbar-height
+  {
+    height:"85px"
+  }
+  .margin-logo
+  {
+    height: 60px;
+    width: 80px;
+    margin-top:"10px";
+    margin-left:"10px";
+  }
+}

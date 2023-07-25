@@ -1,0 +1,16 @@
+ .set{
+    z-index: 9;
+    position: absolute;
+    top: 100%;
+    left: 13%;
+    width: 50%;
+    background-color:#fff;
+    border-radius: 20px;
+    border-color:blue;
+    border-bottom:red;
+    border-top: red;
+    border-style: solid;
+    
+}
+/* collegesearch.css */
+/* search.css */

@@ -1,0 +1,31 @@
+.mainCotnainer
+{
+    
+    /* margin-left: 15%; */
+    /* padding-top: 2%; */
+    /* padding-left: 4%; */
+
+    height: 30vh;
+    width: 40vw;
+    /* background-color: rgb(241, 243, 244); */
+    
+    display: flexbox;
+    /* eight: 00%; */
+    
+
+    
+}
+.pr
+{
+    width: 20vw;
+}
+.rad
+{
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+.headingMargin
+{
+    /* margin-left: 10vw; */
+}

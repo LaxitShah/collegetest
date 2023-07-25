@@ -1,0 +1,20 @@
+.my-modal{
+    width: 70vw;   
+    height: 700px; 
+    max-width: none;
+    padding: 0;
+    margin: 0;
+}
+.modalBody{
+    width: 50vw ;  
+}
+.modalHeader{
+    width: 50vw ;  
+
+}
+.button-container {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+    margin-right: 5px; /* Add some right margin to create space between the button and the edge of the screen */
+  }
