@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useRef, useState } from 'react';
-import { CollegeContext, headers } from './MainComponent';
+import { CollegeContext, headers, url } from './MainComponent';
 import { MdDelete, MdModeEditOutline } from "react-icons/md";
 import { FaSave } from "react-icons/fa";
 import { AiFillCodeSandboxCircle, AiFillDelete } from "react-icons/ai";
@@ -59,13 +59,13 @@ function CollegeAbouUSComp(props) {
             if (aboutDescription !== editAboutDescription) {
                
                 
-                axios.put(`https://main--college-l-web.netlify.app/college/${collegeId}/about/${_id}`,
+                axios.put(`${url}college/${collegeId}/about/${_id}`,
                     { description: editAboutDescription},{headers:headers})
                     .then((res) =>  setAboutDescription(editAboutDescription)).catch((err) => console.log(err))
             }
 
             if (aboutTitle !== editAboutTitle) {
-                axios.put(`https://main--college-l-web.netlify.app/college/${collegeId}/about/${_id}`,
+                axios.put(`${url}college/${collegeId}/about/${_id}`,
                     {title: editAboutTitle },{headers:headers})
                     .then((res) => setAboutTitle(editAboutTitle)).catch((err) => console.log(err))
             }
@@ -73,7 +73,7 @@ function CollegeAbouUSComp(props) {
             if (editImg !== aboutImg) {
                 
                 
-                axios.put(`https://main--college-l-web.netlify.app/college/${collegeId}/about/${_id}`, { imageUrl: editImg },{headers:headers})
+                axios.put(`${url}college/${collegeId}/about/${_id}`, { imageUrl: editImg },{headers:headers})
                     .then((res) => {
                         setAboutImg(editImg)
                     }).catch((err) => console.log(err))

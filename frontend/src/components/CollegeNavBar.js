@@ -99,11 +99,11 @@ function CollegeNavBar({ user, isAdmin }) {
         {College && (
                <div>
                <div className='row'>
-                 <h1 className='col-10 text-center mt-3 mb-0'>{College.name}</h1>
+                 <h1 className='col-12 text-center mt-3 mx-6 mb-0' style={{textAlign:"center"}}>{College.name}</h1>
                </div>
      
             <Navbar className='row'>
-            <Link className='col-2 ms-5' to={`/colleges/${collegeId}/collegehome`}>
+            <Link className='col-2 ms-4' to={`/colleges/${collegeId}/collegehome`}>
               <img height={70} width={70} src={College.logo} className='  ' />
             </Link>
   
@@ -111,7 +111,7 @@ function CollegeNavBar({ user, isAdmin }) {
             {/* <div className='row'> */}
 
            
-              <NavDropdown className='col-4' title={Menu} id='responsive-navbar-nav'>
+              <NavDropdown className='col-4'  title={Menu} id='responsive-navbar-nav'>
                <NavDropdown.Item  style={{width:"100%"}}><Link  aria-expanded="true" style={{width:"100%"}}  to={`/colleges/${collegeId}/collegehome`}><div onClick={()=>{setMenu("Home")}} style={{width:"110%"}}>Home</div></Link></NavDropdown.Item>
                 <NavDropdown.Item  style={{width:"100%"}}><Link aria-expanded="true" style={{width:"100%"}} to={`/colleges/${collegeId}/about`}><div onClick={()=>{setMenu("About")}} style={{width:"110%"}}>About</div></Link></NavDropdown.Item>
                 <NavDropdown.Item  style={{width:"100%"}}><Link aria-expanded="true" style={{width:"100%"}} to={`/colleges/${collegeId}/academics`}><div onClick={()=>{setMenu("Academics")}} style={{width:"110%"}}>Academics</div></Link></NavDropdown.Item>
@@ -149,26 +149,26 @@ function CollegeNavBar({ user, isAdmin }) {
             {/* </div> */}
             </>
             ) : (
-              <div style={{marginTop:"20px"}} className='col-7 d-flex'>
+              <div style={{marginTop:"20px"}} className='col-7 d-flex mx-auto'>
 
 
                 {/* breaking point */}
-                <Link className='nav-link nav-link-hover mx-3 text-dark' to={`/colleges/${collegeId}/collegehome`}>
+                <Link className='nav-link nav-link-hover mx-5 text-dark' to={`/colleges/${collegeId}/collegehome`}>
                   <b className='collegeNav'>Home</b>
                 </Link>
-                <Link className='nav-link nav-link-hover mx-3 text-dark' to={`/colleges/${collegeId}/about`}>
+                <Link className='nav-link nav-link-hover mx-5 text-dark' to={`/colleges/${collegeId}/about`}>
                   <b>About</b>
                 </Link>
-                <Link className='nav-link nav-link-hover mx-3 text-dark' to={`/colleges/${collegeId}/academics`}>
+                <Link className='nav-link nav-link-hover mx-5 text-dark' to={`/colleges/${collegeId}/academics`}>
                   <b>Academics</b>
                 </Link>
-                <Link className='nav-link nav-link-hover mx-3 text-dark' to={`/colleges/${collegeId}/notices`}>
+                <Link className='nav-link nav-link-hover mx-5 text-dark' to={`/colleges/${collegeId}/notices`}>
                   <b>Notice</b>
                 </Link>
-                <Link className='nav-link nav-link-hover mx-3 text-dark' to={`/colleges/${collegeId}/posts`}>
+                <Link className='nav-link nav-link-hover mx-5 text-dark' to={`/colleges/${collegeId}/posts`}>
                   <b>Post</b>
                 </Link>
-                <Link className='nav-link nav-link-hover mx-3 text-dark' to={`/colleges/${collegeId}/contact`}>
+                <Link className='nav-link nav-link-hover mx-5 text-dark' to={`/colleges/${collegeId}/contact`}>
                   <b>Contact</b>
                 </Link>
               </div>

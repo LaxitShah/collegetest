@@ -1,4 +1,3 @@
-import { wait } from '@testing-library/user-event/dist/utils';
 import React, { useState, useContext,useEffect } from 'react';
 import { Card, Form, Modal, Button } from 'react-bootstrap';
 import { AiOutlineCamera } from 'react-icons/ai';
@@ -11,13 +10,15 @@ import { url } from './MainComponent';
 import { token } from './MainComponent';
 import Notice from './Notice';
 import "../CSS/noticeBlock.css";
-const axios = require('axios');
+import axios from 'axios';
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:ital,wght@1,900&display=swap');
 </style>
 const Axios = axios.create();
 let colorIndex = 0;
 
+// const axios = require('axios');
 function NoticeBlock(props) {
     const {
         setNotices,

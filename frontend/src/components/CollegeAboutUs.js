@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import CollegeAbouUSComp from './CollegeAbouUSComp';
 import CollegeNavBar from './CollegeNavBar';
-import { CollegeContext, headers } from './MainComponent';
+import { CollegeContext, headers, url } from './MainComponent';
 import axios from 'axios';
 import { Modal } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
@@ -19,7 +19,7 @@ function CollegeAboutUs({ isAdmin }) {
     const [About, setAbout] = useState();
 
     useEffect(async () => {
-        axios.get(`https://main--college-l-web.netlify.app/college/${collegeId}/about`)
+        axios.get(`${url}college/${collegeId}/about`)
             .then((res) => {
                 console.log(res.data)
                 setAbout(res.data);
@@ -27,7 +27,7 @@ function CollegeAboutUs({ isAdmin }) {
     }, [])
 
     function delAboutComp(_id) {
-        axios.delete(`https://main--college-l-web.netlify.app/college/${collegeId}/about/${_id}`, { headers: headers })
+        axios.delete(`${url}college/${collegeId}/about/${_id}`, { headers: headers })
             .then((res) => {
                 console.log(res.data.json);
                 setAbout(res.data)
@@ -53,7 +53,7 @@ function CollegeAboutUs({ isAdmin }) {
         event.preventDefault();
         const title = event.target.elements.title.value;
         const Content = event.target.elements.Content.value;
-        axios.post(`https://main--college-l-web.netlify.app/college/${collegeId}/about`,
+        axios.post(`${url}college/${collegeId}/about`,
             { "title": title, "imageUrl": newImg, "description": Content }, { headers: headers })
             .then((res) => {
                 console.log(res.data);

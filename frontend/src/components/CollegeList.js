@@ -20,7 +20,7 @@ function CollegeList(props) {
     
 
     useEffect(() => {
-        if(token)
+        if(token){
         axios.get(`${url}users/followedcolleges`, {
             headers: {
                 'Content-Type': 'application/json',
@@ -56,6 +56,7 @@ function CollegeList(props) {
 
             // console.log(user)
         }).catch((err)=>console.log(err))
+    }
     }, [])
 
 

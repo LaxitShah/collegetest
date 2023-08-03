@@ -66,7 +66,7 @@ const AboutUs = () => {
               <div className="founder-details">
                 <h3>Laxit Shah</h3>
                 <p>
-                Cofounder of CollegeWeb,Full Stack Developer 
+                Tech Enthusiast & Frontend Developer
                 </p>
                 <div className="founder-links">
                   <a href="https://github.com/LaxitShah/" target="_blank" rel="noopener noreferrer">

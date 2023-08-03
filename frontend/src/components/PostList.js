@@ -60,7 +60,7 @@ function PostList(props) {
     const postSubmit = (e) => {
         e.preventDefault();
         const caption = e.target.elements.Caption.value;
-        axios.post(`https://main--college-l-web.netlify.app/college/${collegeId}/posts`, {
+        axios.post(`http://localhost:4200/college/${collegeId}/posts`, {
             "url": newPostImg,
             "caption": caption
         },{headers : { "Authorization": "Bearer " + token }})
@@ -81,7 +81,7 @@ function PostList(props) {
 
     function deletePost(postId) {
 
-        axios.delete(`https://main--college-l-web.netlify.app/college/${collegeId}/posts/${postId}`, {
+        axios.delete(`http://localhost:4200/college/${collegeId}/posts/${postId}`, {
         headers:  { "Authorization": "Bearer " + token }
         }).then((res) => { console.log(res.data);SetPost(res.data) })
             .catch((Err) => console.log(Err))
@@ -91,7 +91,7 @@ function PostList(props) {
         // const token = localStorage.getItem("JWTtoken")
         console.log(token)
         const Post1 = [...posts];
-        axios.get(`https://main--college-l-web.netlify.app/college/${collegeId}/posts/${postId}/like`, {
+        axios.get(`http://localhost:4200/college/${collegeId}/posts/${postId}/like`, {
             headers: { "Authorization": "Bearer " + token }
         })
             .then((res) => {
@@ -146,7 +146,7 @@ function PostList(props) {
                         {posts && posts.map(post => {
 
                             return <div  className='col-12 col-md-9 mx-auto col-lg-5' key={post._id}>
-                                
+                            
                                 <Post
                                 isAdmin = {isAdmin}
                                 collegeId={collegeId}

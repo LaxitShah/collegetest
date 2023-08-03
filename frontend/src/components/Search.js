@@ -64,11 +64,11 @@ function Search({ ishome }) {
                             <div className='set '>
                                 {data.map(college => {
                                     return (
-                                        <div className='row mt-2' style={{ cursor: "pointer" }} >
+                                        <div className='row mt-2' style={{ cursor: "pointer",marginLeft:"3px" }} >
 
-                                            <Link className='nav-link  col-10 d-flex' onClick={() => { setName(""); setReload(val => !val); setIsMenuOpen(false) }} to={`/colleges/${college._id}`}>
+                                            <Link className='nav-link col-12  col-lg-10 d-flex' onClick={() => { setName(""); setReload(val => !val); setIsMenuOpen(false) }} to={`/colleges/${college._id}`}>
 
-                                                <div className='col-md-2 col-lg-1 col-3 ms-md-2' >
+                                                <div className='col-md-2 ml-5 col-lg-1 col-3 ms-md-2'  >
                                                     <img src={college.logo} className='borde mx-auto my-auto' style={{ borderRadius: "100%", width: "50px", height: "50px" }} />
                                                 </div>
                                                 <div className='text-dark fs-6 ms-lg-3 overflow-hidden' >

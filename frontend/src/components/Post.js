@@ -37,9 +37,10 @@ function Post(props) {
 
         const token = localStorage.getItem("JWTtoken")
         // console.log(token)
-        axios.get(`https://main--college-l-web.netlify.app/college/${collegeId}/posts/${_id}/isLiked`, {
+        axios.get(`http://localhost:4200/college/${collegeId}/posts/${_id}/isLiked`, {
             headers: { "Authorization": "Bearer " + token }
         })
+        
             .then((res) => {
                 // console.log(res.data)
                 // isLiked.current=res.data;   
@@ -74,7 +75,7 @@ function Post(props) {
             // console.log(tempCaption)
             setNewCaption(tempCaption)
             console.log(newCaption)
-            axios.put(`https://main--college-l-web.netlify.app/college/${collegeId}/posts/${_id}`, {
+            axios.put(`http://localhost:4200/college/${collegeId}/posts/${_id}`, {
                 "caption": tempCaption
             }, { headers: headers })
                 .catch((err) => console.log(err))
@@ -96,25 +97,25 @@ function Post(props) {
         console.log("workNthiKrtu")
     }
     return (
-        <div className='shadow mb-4 mx-sm-auto'>
-            <div className=''>
+        <div className='shadow mb-4'>
+            <div className=' '>
                 <div style={{ display: 'flex', width: "10" }} className='mx-0 row my-auto'>
 
                     <Link to={`/colleges/${collegeId}/collegehome`}  className="mt-2 col-2 ml-2"><img src={logo} className="  my-auto border border-rounded "
                         style={{ borderRadius: "100%", width: "100%", height: "65px", padding: 0 }} /></Link>
 
                     {/* <p style={{paddingLeft:70,paddingTop:10}} >Name</p> */}
-                    <Link to={`/colleges/${collegeId}/collegehome`}  className='col-8 mr-1 col-md-9 nav-link text-dark fs-5 '><p className='mb-1'><b>{name}</b><br></br>
+                    <Link to={`/colleges/${collegeId}/collegehome`}  className='col-9 nav-link text-dark fs-5 '><p className='mb-1'><b>{name}</b><br></br>
                         {city}</p> </Link> 
-                    {isAdmin && <span onClick={() => deletePost(_id)} className='col-2 col-md-1 mt-3 '><AiFillDelete size={30} cursor="pointer" className='' /></span>}
+                    {isAdmin && <span onClick={() => deletePost(_id)} className='col-1 mt-3 '><AiFillDelete size={30} cursor="pointer" className='' /></span>}
                 </div>
 
-                <div className='row mx-0 mt-2'>
-                <img className='col-12 mx-sm-auto' src={url} style={{ padding: "0%", maxHeight: '410px' }} width={"100%"} alt="Your image description"></img>
+                <div className='row mx-0'>
+                    <img className='col-12' src={url} style={{ padding: 0, maxheight: '550px' }} width={"100%"}></img>
                 </div>
                 <div className='row mt-2 mx-0'>
 
-                    <div width="120%" className='flex col-md-11 col-10 '>
+                    <div width="120%" className='flex col-11'>
                         <b>{name}</b>
                         {
                             !isUpdateClick ? <p className='bound' >{tempCaption}</p> : <textarea class="form-control" rows="4"
@@ -122,7 +123,7 @@ function Post(props) {
                                 onChange={(e) => setTempCaption(e.target.value)} width="100%" />
                         }
                     </div>
-                    {isAdmin && <div className='col-2 col-md-1 mt-2'>
+                    {isAdmin && <div className='col-1'>
                         <span
                             onClick={() => { setUpdateClick(!isUpdateClick); changeUpdateClick() }}>{!isUpdateClick ? <FaEdit size={25} cursor="pointer" className='hover-shadow'/> : <FaSave  size={25} cursor="pointer" className='hover-shadow '/>}</span>
                         {

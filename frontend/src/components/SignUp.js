@@ -89,7 +89,7 @@ function SignUp({ setUser, setlogin }) {
             "password": password,
             "profile":image,
         }
-        fetch("https://main--college-l-web.netlify.app/users/signup", {
+        fetch(url+"users/signup", {
             method: 'Post',
             headers: {
                 'Content-Type': 'application/json'
