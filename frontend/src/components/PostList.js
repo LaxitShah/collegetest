@@ -60,7 +60,7 @@ function PostList(props) {
     const postSubmit = (e) => {
         e.preventDefault();
         const caption = e.target.elements.Caption.value;
-        axios.post(`http://localhost:4200/college/${collegeId}/posts`, {
+        axios.post(`${url}ollege/${collegeId}/posts`, {
             "url": newPostImg,
             "caption": caption
         },{headers : { "Authorization": "Bearer " + token }})

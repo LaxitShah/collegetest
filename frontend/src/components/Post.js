@@ -37,7 +37,7 @@ function Post(props) {
 
         const token = localStorage.getItem("JWTtoken")
         // console.log(token)
-        axios.get(`http://localhost:4200/college/${collegeId}/posts/${_id}/isLiked`, {
+        axios.get(`https://collegeweb-backend-6tic.onrender.com/college/${collegeId}/posts/${_id}/isLiked`, {
             headers: { "Authorization": "Bearer " + token }
         })
         
@@ -75,7 +75,7 @@ function Post(props) {
             // console.log(tempCaption)
             setNewCaption(tempCaption)
             console.log(newCaption)
-            axios.put(`http://localhost:4200/college/${collegeId}/posts/${_id}`, {
+            axios.put(`https://collegeweb-backend-6tic.onrender.com/college/${collegeId}/posts/${_id}`, {
                 "caption": tempCaption
             }, { headers: headers })
                 .catch((err) => console.log(err))
