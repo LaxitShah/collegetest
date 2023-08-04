@@ -81,7 +81,7 @@ function PostList(props) {
 
     function deletePost(postId) {
 
-        axios.delete(`http://localhost:4200/college/${collegeId}/posts/${postId}`, {
+        axios.delete(`${url}college/${collegeId}/posts/${postId}`, {
         headers:  { "Authorization": "Bearer " + token }
         }).then((res) => { console.log(res.data);SetPost(res.data) })
             .catch((Err) => console.log(Err))
@@ -91,7 +91,7 @@ function PostList(props) {
         // const token = localStorage.getItem("JWTtoken")
         console.log(token)
         const Post1 = [...posts];
-        axios.get(`http://localhost:4200/college/${collegeId}/posts/${postId}/like`, {
+        axios.get(`${url}college/${collegeId}/posts/${postId}/like`, {
             headers: { "Authorization": "Bearer " + token }
         })
             .then((res) => {

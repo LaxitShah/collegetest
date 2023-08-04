@@ -36,7 +36,7 @@ import { LineLayoutArray } from 'maplibre-gl';
 const axios = require('axios');
 export const CollegeContext = React.createContext()
 
-export const url = "https://collegeweb-backend-6tic.onrender.com/";
+export const url = "https://collegeweb-backend-6tic.onrender.com/backend/";
 // export const url="http://localhost:4200/"
 
 
